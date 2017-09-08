@@ -1,0 +1,32 @@
+﻿Sub Test1
+  Dim browser
+  Dim form
+  Dim textbox
+  Dim panel
+  Dim passwordBox
+  Dim page
+  Call Browsers.Item(btIExplorer).Run("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx?ReturnUrl=%2fsamples%2ftestcomplete11%2fweborders%2f")
+  Set browser = Aliases.browser
+  Set form = browser.pageWebOrdersLogin.formAspnetform
+  Set textbox = form.textboxUsername
+  Call textbox.Click(24, 4)
+  Call textbox.SetText("Tester")
+  Call textbox.Keys("[Tab]")
+  Set panel = form.panelLogin
+  Set passwordBox = panel.passwordboxPassword
+  Call passwordBox.Click(79, 17)
+  Call passwordBox.SetText("test")
+  panel.submitbuttonLogin.ClickButton
+  Set page = browser.pageWebOrders2
+  page.Wait
+  Call page.formAspnetform.tableOrdergrid.cell.imagebutton.Click(12, 9)
+  Set page = browser.pageWebOrders
+  page.Wait
+  Set form = page.formAspnetform
+  Set textbox = form.textboxTxtname
+  Call textbox.DblClick(45, 14)
+  Call textbox.SetText("Paul")
+  form.tableFmworder.linkUpdatebutton.Click
+  Call aqObject.CheckProperty(Aliases.browser.pageWebOrders.formAspnetform.tableOrdergrid.cellBrown, "ColumnIndex", cmpEqual, 1)
+  browser.BrowserWindow.Close
+End Sub

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="12.0" key="{A42F19E5-8024-4CBF-BA93-F7467D4990BE}">
+	<children>
+		<child name="TestProject1" key="{A1761638-7D59-46C7-B43E-F514D21EA285}" type="Project" typeId="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" pluginName="">
+			<data path="TestProject1\TestProject1.mds" />
+		</child>
+	</children>
+	<folders />
+	<testItems key="{660F298B-CEE6-4653-890E-D079969A22C9}">
+		<children>
+			<testItem key="{A1761638-7D59-46C7-B43E-F514D21EA285}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{83831ABD-F50F-45FB-BAA7-381ACD539AAB}">
+		<data Version="3" />
+	</variables>
+	<analysis key="{25C0AF9D-78E5-48AA-B3E9-6840E86B3E41}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}" />
+</Root>
